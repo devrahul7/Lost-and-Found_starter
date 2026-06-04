@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:lost_n_found/app/routes/app_routes.dart';
+
 import 'package:lost_n_found/app/theme/app_colors.dart';
 import 'package:lost_n_found/app/theme/theme_extensions.dart';
 import 'package:lost_n_found/core/widgets/gradient_button.dart';
 import 'package:lost_n_found/core/widgets/utils/snackbar_utils.dart';
 import 'package:lost_n_found/features/auth/presentation/state/auth_state.dart';
 import 'package:lost_n_found/features/auth/presentation/view_model/auth_view_model.dart';
-import 'package:lost_n_found/features/batch/domain/entities/batch_entity.dart';
+
 import 'package:lost_n_found/features/batch/presentation/state/batch_state.dart';
 import 'package:lost_n_found/features/batch/presentation/view_model/batch_viewmodel.dart';
 
 
-import '../../../dashboard/presentation/pages/dashboard_page.dart';
 
 class SignupPage extends ConsumerStatefulWidget {
   const SignupPage({super.key});
@@ -31,7 +30,7 @@ class _SignupPageState extends ConsumerState<SignupPage> {
 
   bool _obscurePassword = true;
   bool _obscureConfirmPassword = true;
-  bool _isLoading = false;
+  final bool _isLoading = false;
   bool _agreedToTerms = false;
   String? _selectedBatch;
   String _selectedCountryCode = '+977'; // Default Nepal
@@ -83,6 +82,7 @@ class _SignupPageState extends ConsumerState<SignupPage> {
   void _navigateToLogin() {
     Navigator.of(context).pop();
   }
+  @override
   void initState(){
     super.initState();
     Future.microtask((){

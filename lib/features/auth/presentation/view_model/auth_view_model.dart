@@ -1,6 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:lost_n_found/core/error/failures.dart';
-import 'package:lost_n_found/features/auth/domain/entities/auth_entity.dart';
 import 'package:lost_n_found/features/auth/domain/usecases/login_usecase.dart';
 import 'package:lost_n_found/features/auth/domain/usecases/register_usecase.dart';
 import 'package:lost_n_found/features/auth/presentation/state/auth_state.dart';
